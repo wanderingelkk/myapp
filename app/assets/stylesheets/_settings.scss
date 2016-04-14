@@ -45,7 +45,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 85%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
@@ -233,8 +233,8 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: 0.85em .85em;
+$button-margin: 0 0 $global-margin 0 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
@@ -248,6 +248,27 @@ $button-sizes: (
   large: 1.25rem,
 );
 $button-opacity-disabled: 0.25;
+
+// 11. Button
+
+
+//	$button-padding: 0.85em 1em;
+//	$button-margin: 0 0 $global-margin 0;
+//	$button-fill: solid;
+//	$button-background: $primary-color;
+//	$button-background-hover: scale-color($button-background, $lightness: -15%);
+//	$button-color: $white;
+//	$button-color-alt: $black;
+//	$button-radius: $global-radius;
+//	$button-sizes: (
+//  tiny: 0.6rem,
+//  small: 0.75rem,
+//  default: 0.9rem,
+//  large: 1.25rem,
+//	);
+//	$button-opacity-disabled: 0.25;
+
+
 
 // 12. Button Group
 // ----------------
