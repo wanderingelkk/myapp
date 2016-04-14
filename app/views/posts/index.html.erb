@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
-
 <h2 align=middle>Posts</h2>
-<!---<%= button_to "New Post", new_post_path, :method => "get" %></div>-!-->
-<class align='middle'><%= button_to "Add a Post", new_post_path, :id => "add_a_post_btn",
+<class align='center	'><%= button_to "Add a Post", new_post_path, :id => "add_a_post_btn",
       :class => "button alert", :method => :get %></class>
 <table>
   <thead>
@@ -19,23 +17,23 @@
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <!-- ><td><%= link_to 'Show', post %></td> -->
-				<td><%= button_to "Show", post, :id => "show-post-btn",
-				      :class => "button alert tiny", :method => :get %></td>
-        <!-- <td><%= link_to 'Edit', edit_post_path(post) %></td>--> 
-     	 	<td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :id => "destroy-post-btn", :class => "button alert tiny" %></td>
+				<td><%= button_to "Show", post, :id => "show-post-btn", 
+				      :class => "button alert small", :method => :get %></td>
+        <td><%= button_to 'Edit', edit_post_path(post), :class => "button alert small", :method => :get %></td>
+     	 	<td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :id => "destroy-post-btn", :class => "button alert small" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<br>
-  <div class="column row">
-    <ul class="pagination" role="navigation" aria-label="Pagination">
-      <li class="disabled">« <span class="show-for-sr">Previous page</span></li>
-      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-      <li><a href="#" aria-label="Page 2">2</a></li>
-      <li><a href="#" aria-label="Page 3">3</a></li>
-      <li><a href="#" aria-label="Page 4">4</a></li>
-      <li><a href="#" aria-label="Page 5">5</a></li>
-      <li><a href="#" aria-label="Next page">» <span class="show-for-sr">Next page</span></a></li>
-    </ul>
-  </div>
+
+<ul class="pagination text-center" role="navigation" aria-label="Pagination">
+  <li class="pagination-previous disabled">Previous</li>
+  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+  <li><a href="#" aria-label="Page 2">2</a></li>
+  <li><a href="#" aria-label="Page 3">3</a></li>
+  <li><a href="#" aria-label="Page 4">4</a></li>
+  <li class="ellipsis"></li>
+  <li><a href="#" aria-label="Page 12">12</a></li>
+  <li><a href="#" aria-label="Page 13">13</a></li>
+  <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+</ul>
