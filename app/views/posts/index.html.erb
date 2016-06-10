@@ -1,41 +1,26 @@
 <p id="notice"><%= notice %></p>
-<h2 align=middle>Posts</h2>
-<class align='center	'><%= button_to "Add a Post", new_post_path, :id => "add_a_post_btn",
-      :class => "button alert", :method => :get %></class>
-			
-<br>
+
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3">Actions</th>
+      <th width="200">Title</th>
+      <th width="700">Body</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr align=left>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <!-- ><td><%= link_to 'Show', post %></td> -->
-				<td><%= button_to "Show", post, :id => "show-post-btn", 
-				      :class => "button alert small", :method => :get %></td>
-        <td><%= button_to 'Edit', edit_post_path(post), :class => "button alert small", :method => :get %></td>
-     	 	<td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :id => "destroy-post-btn", :class => "button alert small" %></td>
+      <tr>
+        <td><%= post.title.first(50) %></td>
+        <td><%= post.body.first(80) %></td>
+        <td><ul class="button-group">
+				        <%= button_to "Show", post, :id => "show-post-btn", class: "button", :method => :get %>
+                <%= button_to 'Edit', edit_post_path(post), class: "button", :method => :get %>
+     	 	        <%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :id => "destroy-post-btn", :class => "button" %></ul>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<ul class="pagination text-center" role="navigation" aria-label="Pagination">
-  <li class="pagination-previous disabled">Previous</li>
-  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-  <li><a href="#" aria-label="Page 2">2</a></li>
-  <li><a href="#" aria-label="Page 3">3</a></li>
-  <li><a href="#" aria-label="Page 4">4</a></li>
-  <li class="ellipsis"></li>
-  <li><a href="#" aria-label="Page 12">12</a></li>
-  <li><a href="#" aria-label="Page 13">13</a></li>
-  <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
-</ul>
+<i><span class="fa fa fa-cog fa-3x" aria-hidden="true"></i>
